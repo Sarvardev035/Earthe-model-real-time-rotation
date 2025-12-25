@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Globe - Earth, Sun, Moon & Stars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="info">
+        <h1>🌍 Digital Globe</h1>
+        <p>Drag to rotate • Scroll to zoom</p>
+    </div>
+    
+    <div id="dataPanel">
+        <h2>🌎 Earth Facts</h2>
+        <div class="fact">
+            <span class="label">Age:</span>
+            <span class="value">4.54 billion years</span>
+        </div>
+        <div class="fact">
+            <span class="label">Mass:</span>
+            <span class="value">5.972 × 10²⁴ kg</span>
+        </div>
+        <div class="fact">
+            <span class="label">Radius:</span>
+            <span class="value">6,371 km</span>
+        </div>
+        <div class="fact">
+            <span class="label">Rotation:</span>
+            <span class="value">23.93 hours</span>
+        </div>
+        <div class="fact">
+            <span class="label">Axial Tilt:</span>
+            <span class="value">23.5°</span>
+        </div>
+        
+        <h2 style="margin-top: 15px;">🌙 Moon Facts</h2>
+        <div class="fact">
+            <span class="label">Age:</span>
+            <span class="value">4.51 billion years</span>
+        </div>
+        <div class="fact">
+            <span class="label">Mass:</span>
+            <span class="value">7.342 × 10²² kg</span>
+        </div>
+        <div class="fact">
+            <span class="label">Distance:</span>
+            <span class="value">384,400 km</span>
+        </div>
+        <div class="fact">
+            <span class="label">Orbit:</span>
+            <span class="value">27.3 days</span>
+        </div>
+    </div>
+    
+    <div id="controls">
+        <h3>⚙️ Controls</h3>
+        
+        <div class="control-group">
+            <label for="earthSpeed">Earth Rotation</label>
+            <input type="range" id="earthSpeed" min="0" max="5" step="0.1" value="1">
+            <span id="earthSpeedValue">1.0x</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="moonSpeed">Moon Orbit</label>
+            <input type="range" id="moonSpeed" min="0" max="5" step="0.1" value="1">
+            <span id="moonSpeedValue">1.0x</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="timeScale">Time Scale</label>
+            <input type="range" id="timeScale" min="0" max="10" step="0.5" value="1">
+            <span id="timeScaleValue">1.0x</span>
+        </div>
+        
+        <div class="button-group">
+            <button id="resetView">Reset View</button>
+            <button id="toggleRotation">Pause</button>
+        </div>
+    </div>
+    
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
